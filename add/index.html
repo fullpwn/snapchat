@@ -14,7 +14,8 @@
     </style>
 </head>
 <body>
-    <img class="snapcode" alt="snapcode">
+    <h1 id="header_user"></h1>
+    <img class="snapcode" alt="snapcode" src="">
     <center><button onclick="myFunction()">Add</button></center>
     <script>
 let searchParams = new URLSearchParams(window.location.search)
@@ -22,6 +23,7 @@ searchParams.has('id')
 let userid = searchParams.get('id')
 let username = atob(userid)
 document.title = "Add " + username
+document.getElementById("header_user").innerHTML = "Add @" + username
 document.getElementById("snapcode").src= "https://app.snapchat.com/web/deeplink/snapcode?username=" + username + "&type=SVG";
 
 https://app.snapchat.com/web/deeplink/snapcode?username=" + gen + "&type=SVG"
