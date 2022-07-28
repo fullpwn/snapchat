@@ -8,6 +8,10 @@ document.getElementById("header_user").innerHTML = "Add @" + username
 function addsnap() {
     location.replace("snapchat://add/" + username)
 }
-const image = document.getElementById('snapcode');
+setTimeout(function (){
+  
+    const image = document.getElementById('snapcode');
 
 image.src = "https://app.snapchat.com/web/deeplink/snapcode?username=" + username + "&type=SVG";
+              
+  }, 1000)
