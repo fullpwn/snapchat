@@ -11,12 +11,32 @@
       font-family: 'Graphik', Helvetica, sans-serif;
       background-color: #FFFC00;
     }
+    button {
+        padding: 11px 24px 10px;
+        font-family: 'Graphik', Helvetica, sans-serif;
+    }
     </style>
 </head>
 <body>
     <center><h1 id="header_user"></h1></center>
     <center><img id="snapcode" src=""></center>
     <center><button onclick="addsnap()">Add</button></center>
-    <script src="script.js"></script>
+    <script>
+        let searchParams = new URLSearchParams(window.location.search)
+searchParams.has('id') 
+let userid = searchParams.get('id')
+let username = atob(userid)
+document.title = "Add " + username
+document.getElementById("header_user").innerHTML = "Add @" + username
+
+function addsnap() {
+    location.replace("snapchat://add/" + username)
+}
+  
+    const image = document.getElementById('snapcode');
+
+image.src = "https://app.snapchat.com/web/deeplink/snapcode?username=" + username + "&type=SVG";
+
+    </script>
 </body>
 </html>
