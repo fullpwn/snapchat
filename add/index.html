@@ -12,7 +12,7 @@ let searchParams = new URLSearchParams(window.location.search)
 searchParams.has('id') 
 let userid = searchParams.get('id')
 let username = atob(userid)
-document.title("Add " + username)
+document.title = "Add " + username
 location.replace("snapchat://add/" + username)
 
     </script>
