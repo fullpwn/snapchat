@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Username: <input type="text" id="user">
+
+<button onclick="myFunction()">Get Link</button>
+
+<p id="link">Waiting for output..</p>
+
+<script>
+function myFunction() {
+  var user = document.getElementById("user").value;
+  let users = btoa(user)
+  document.getElementById("link").innerHTML = "https://snapchat.fullpwn.net/add/?id=" + users;
+}
+</script>
+
+</body>
+</html>
