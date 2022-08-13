@@ -23,10 +23,6 @@ function myFunction() {
   let users = btoa(user)
   document.getElementById("link").innerHTML = "https://snapchat.fullpwn.net/add/?id=" + users;
   document.querySelector('#test').setAttribute('data-share-url', 'https://snapchat.fullpwn.net/add/?id=' + users)
-}
-
-</script>
-<script>
   // Load the SDK asynchronously
   (function (d, s, id) {
     var js,
@@ -37,6 +33,9 @@ function myFunction() {
     js.src = "https://sdk.snapkit.com/js/v1/create.js";
     sjs.parentNode.insertBefore(js, sjs);
   })(document, "script", "snapkit-creative-kit-sdk");
+}
+
 </script>
+
 </body>
 </html>
