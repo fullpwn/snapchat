@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <body>
 
 Username: <input type="text" id="user">
@@ -8,13 +9,36 @@ Username: <input type="text" id="user">
 
 <p id="link">Waiting for output..</p>
 
+<div
+id="test"
+class="snapchat-creative-kit-share"
+data-theme="dark"
+data-size="large"
+data-text="false"
+data-share-url=""
+></div>
+
 <script>
 function myFunction() {
   var user = document.getElementById("user").value;
   let users = btoa(user)
   document.getElementById("link").innerHTML = "https://snapchat.fullpwn.net/add/?id=" + users;
+  document.querySelector('#test').setAttribute('data-share-url', 'https://snapchat.fullpwn.net/add/?id=' + users)
+  $( "#test" ).load(window.location.href + " #test" );
 }
-</script>
 
+</script>
+<script>
+  // Load the SDK asynchronously
+  (function (d, s, id) {
+    var js,
+      sjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://sdk.snapkit.com/js/v1/create.js";
+    sjs.parentNode.insertBefore(js, sjs);
+  })(document, "script", "snapkit-creative-kit-sdk");
+</script>
 </body>
 </html>
