@@ -26,8 +26,7 @@
     <script>
         let searchParams = new URLSearchParams(window.location.search)
 searchParams.has('id') 
-let userid = searchParams.get('id')
-let username = atob(userid)
+let username = searchParams.get('id')
 document.title = "Add " + username + " on Snapchat"
 document.getElementById("header_user").innerHTML = username
 
