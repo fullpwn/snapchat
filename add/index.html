@@ -29,7 +29,7 @@ searchParams.has('id')
 let userid = searchParams.get('id')
 let username = atob(userid)
 document.title = "Add " + username + " on Snapchat"
-document.getElementById("header_user").innerHTML + username
+document.getElementById("header_user").innerHTML = username
 
 function addsnap() {
     location.replace("snapchat://add/" + username)
