@@ -7,7 +7,7 @@ Username: <input type="text" id="user">
 
 <button onclick="myFunction()">Get Link</button>
 
-<p id="link">Waiting for output..</p>
+<button id="link" src="">Waiting on input.</button>
 
 <div
 id="test"
@@ -20,9 +20,9 @@ data-text="false"
 <script>
 function myFunction() {
   var user = document.getElementById("user").value;
-  let users = btoa(user)
-  document.getElementById("link").innerHTML = "https://snapchat.fullpwn.net/add/?id=" + users;
-  document.querySelector('#test').setAttribute('data-share-url', 'https://snapchat.fullpwn.net/add/?id=' + users)
+  document.getElementById("link").src = "https://snapchat.com/scan?attachmentUrl=https://snapchat.fullpwn.net/add/?id=" + user;
+  document.getElementById("link").innerHTML = "Attach to Snap"
+  document.querySelector('#test').setAttribute('data-share-url', 'https://snapchat.fullpwn.net/add/?id=' + user)
   // Load the SDK asynchronously
   (function (d, s, id) {
     var js,
