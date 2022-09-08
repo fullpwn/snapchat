@@ -7,7 +7,7 @@ Username: <input type="text" id="user">
 
 <button onclick="myFunction()">Get Link</button>
 
-<button id="link" src="">Waiting on input.</button>
+<a href="" id="link"></a>
 
 <div
 id="test"
@@ -20,7 +20,7 @@ data-text="false"
 <script>
 function myFunction() {
   var user = document.getElementById("user").value;
-  document.getElementById("link").src = "https://snapchat.com/scan?attachmentUrl=https://snapchat.fullpwn.net/add/?id=" + user;
+  document.getElementById("link").href = "https://snapchat.com/scan?attachmentUrl=https://snapchat.fullpwn.net/add/?id=" + user;
   document.getElementById("link").innerHTML = "Attach to Snap"
 }
 
