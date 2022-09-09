@@ -5,23 +5,21 @@
 
 Username: <input type="text" id="user">
 
-<button onclick="myFunction()">Get Link</button>
+<button onclick="myFunction()">Attach to Snap</button>
+<br>
+<p id="select"></p>
+<a href="" id="max"></a>
+<a href="" id="mini"></a>
 
-<a href="" id="link"></a>
-
-<div
-id="test"
-class="snapchat-creative-kit-share"
-data-theme="dark"
-data-size="large"
-data-text="false"
-></div>
 
 <script>
 function myFunction() {
   var user = document.getElementById("user").value;
-  document.getElementById("link").href = "https://snapchat.com/scan?attachmentUrl=https://snapchat.fullpwn.net/add/?id=" + user;
-  document.getElementById("link").innerHTML = "Attach to Snap"
+  document.getElementById("select").innerHTML = "Select the sticker size."
+  document.getElementById("max").href = "https://snapchat.com/scan?attachmentUrl=https://snapchat.fullpwn.net/add/?id=" + user;
+  document.getElementById("max").innerHTML = "Max"
+  document.getElementById("mini").href = "https://snapchat.com/scan?attachmentUrl=https://snapchat.fullpwn.net/mini/?id=" + user;
+  document.getElementById("mini").innerHTML = "mini"
 }
 
 </script>

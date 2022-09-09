@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://www.snapchat.com/images/favicon.png">
+    <link rel="stylesheet" href="https://storage.googleapis.com/snap-design-system/fonts/font.graphik.css">
+    <meta property="og:title" content="Tap here to visit the attached profile!">
+    <style>
+            body {
+      font-family: 'Graphik', Helvetica, sans-serif;
+      background-color: #FFFC00;
+    }
+    button {
+        padding: 11px 24px 10px;
+        font-family: 'Graphik', Helvetica, sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <center><h1 id="header_user"></h1></center>
+    <center><img id="snapcode" src=""></center>
+    <center><button onclick="addsnap()">Visit Profile</button></center>
+    <script>
+        let searchParams = new URLSearchParams(window.location.search)
+searchParams.has('id') 
+let username = searchParams.get('id')
+document.title = "Add " + username + " on Snapchat"
+document.getElementById("header_user").innerHTML = username
+
+function addsnap() {
+    location.replace("snapchat://add/" + username)
+}
+  
+    const image = document.getElementById('snapcode');
+
+image.src = "https://app.snapchat.com/web/deeplink/snapcode?username=" + username + "&type=SVG";
+
+
+
+    </script>
+</body>
+</html>
